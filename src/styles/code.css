@@ -1,0 +1,5 @@
+@component {
+  pre {
+    @apply text-sm;
+  }
+}

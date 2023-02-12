@@ -3,7 +3,8 @@ import Link from 'next/link';
 
 import { getAllPosts } from '@/libs/post';
 import Layout from '@/components/layouts/Layouts';
-import HoverLink from '@/components/common/HoverLink';
+import Article from '@/components/Article';
+import styles from './posts.module.scss';
 
 export const getStaticProps = () => {
   return {
@@ -16,10 +17,10 @@ export const getStaticProps = () => {
 export default function PostsPage({ posts }: { posts: Post[] }) {
   return (
     <Layout title="Posts">
-      <ul>
+      <ul className={styles.postList}>
         {posts.map((post, i) => (
           <li key={i}>
-            <HoverLink href={post.slug}>{post.title}</HoverLink>
+            <Article post={post}></Article>
           </li>
         ))}
       </ul>

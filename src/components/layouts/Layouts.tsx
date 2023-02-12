@@ -1,19 +1,23 @@
 import Link from 'next/link';
 import { FC, ReactNode } from 'react';
+import Head from 'next/head';
+import { useTheme } from 'next-themes';
 
 import NavLink from '../common/NavLink';
-import Head from 'next/head';
 
-import styles from './layout.module.css';
+import styles from './layout.module.scss';
 
 const Layout: FC<{
   children: ReactNode;
   title: string;
 }> = ({ children, title }) => {
+  const { theme, setTheme } = useTheme();
+  const nextTheme = theme === 'dark' ? 'light' : 'dark';
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Suitcase</title>
+        <title>{title} | Suitcase</title>
       </Head>
       <header>
         <nav>
@@ -26,6 +30,15 @@ const Layout: FC<{
             </li>
             <li>
               <NavLink href="/blog">Blog</NavLink>
+            </li>
+            <li>
+              <button
+                role="button"
+                className={styles.themeToggle}
+                onClick={() => setTheme(nextTheme)}
+              >
+                theme
+              </button>
             </li>
           </ul>
         </nav>

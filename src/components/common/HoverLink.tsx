@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ReactNode } from 'react';
 
-import styles from './common.module.css';
+import styles from './common.module.scss';
 import { $ } from '@/libs/core';
 
 const HoverLink = ({

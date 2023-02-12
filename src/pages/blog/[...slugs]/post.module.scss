@@ -1,0 +1,11 @@
+@use '@/styles/colors' as c;
+
+.content {
+  a {
+    color: c.$primary;
+  }
+}
+
+// #7BA638
+// #E0333E
+// #F5365A

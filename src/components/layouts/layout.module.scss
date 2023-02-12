@@ -1,0 +1,32 @@
+@use '@/styles/colors' as c;
+
+.heading {
+  color: c.$black;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.container {
+  margin: auto;
+  max-width: 700px;
+  font-family: var(--font-sans-serif);
+  font-size: 16px;
+  color: c.$black;
+}
+
+.themeToggle {
+  all: unset;
+  &:hover {
+    text-decoration: underline;
+  }
+  cursor: pointer;
+  user-select: none;
+
+  &::selection {
+    outline: aqua;
+  }
+}

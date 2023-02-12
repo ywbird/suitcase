@@ -1,5 +1,7 @@
+@use '@/styles/colors' as c;
+
 .link {
-  color: black;
+  color: c.$black;
   text-decoration: none;
 }
 
@@ -12,5 +14,5 @@
 }
 
 .navLinkItem {
-  padding-right: 2rem;
+  margin-right: 2rem;
 }

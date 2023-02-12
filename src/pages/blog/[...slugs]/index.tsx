@@ -7,7 +7,7 @@ import { serializeMdx } from '@/libs/mdx';
 import Layout from '@/components/layouts/Layouts';
 import { Post } from '@/types';
 
-import styles from './post.module.css';
+import styles from './post.module.scss';
 
 export const getStaticPaths: GetStaticPaths = () => {
   const posts = getAllPosts();
@@ -56,7 +56,7 @@ export default function PostPage({
           <span key={tag}>{tag} </span>
         ))}
       </p>
-      <div className="post">
+      <div className={styles.content}>
         <MDXRemote {...mdx} />
       </div>
     </Layout>

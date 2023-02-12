@@ -11,5 +11,6 @@
 .container {
   margin: auto;
   max-width: 700px;
-  font-family: sans-serif;
+  font-family: var(--font-sans-serif);
+  font-size: 16px;
 }

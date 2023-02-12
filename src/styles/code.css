@@ -1,5 +1,27 @@
-@component {
-  pre {
-    @apply text-sm;
-  }
+pre[data-language] {
+  padding: 0.7rem;
+}
+
+code[data-language],
+pre[data-language] {
+  font-family: var(--font-monospace);
+  font-size: 16px;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  font-feature-settings: 'calt' on;
+}
+
+div[data-rehype-pretty-code-fragment] > pre[data-language]:nth-child(2) {
+  margin-top: 0;
+}
+
+div[data-rehype-pretty-code-title] {
+  display: inline-block;
+  background-color: #0f111a;
+  color: white;
+  padding-inline: 0.7rem;
+  padding-block: 0.3rem;
+  font-family: var(--font-monospace);
+  font-size: 16px;
 }

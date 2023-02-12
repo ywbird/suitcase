@@ -1,4 +1,4 @@
-const path = require('path');
+const withExportImages = require('next-export-optimize-images');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -9,4 +9,4 @@ if (process.env.NODE_ENV === 'production') {
   nextConfig.basePath = '/suitcase';
 }
 
-module.exports = nextConfig;
+module.exports = withExportImages(nextConfig);

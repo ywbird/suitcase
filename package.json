@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build && next export && next-export-optimize-images",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "next build && next export",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d out"
   },
   "dependencies": {
@@ -28,6 +28,7 @@
     "@types/glob": "^8.0.1",
     "glob": "8.1.0",
     "gray-matter": "^4.0.3",
+    "next-export-optimize-images": "^2.0.0",
     "reading-time": "^1.5.0",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-code-titles": "^1.1.0",

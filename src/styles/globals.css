@@ -1,13 +1,20 @@
 @import url(./code.css);
 
 /* Neo둥근모 Code */
-@import url('//cdn.jsdelivr.net/gh/neodgm/neodgm-webfont@1.530/neodgm_code/style.css');
+@import url('https://cdn.jsdelivr.net/gh/neodgm/neodgm-webfont@latest/neodgm_code/style.css');
 /* Neo둥근모 Pro */
-@import url('//cdn.jsdelivr.net/gh/neodgm/neodgm-pro-webfont@1.020/neodgm_pro/style.css');
+@font-face {
+  font-family: 'NeoDunggeunmo Pro';
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  src: url('/fonts/neodgm_pro/neodgm_pro.woff2') format('woff2'),
+    url('/fonts/neodgm_pro/neodgm_pro.woff') format('woff'),
+    url('/fonts/neodgm_pro/neodgm_pro.ttf') format('truetype');
+}
+
 /* Noto Sans */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-/* galmuri */
-@import url('https://cdn.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
 
 html {
   margin-left: calc(100vw - 100%);

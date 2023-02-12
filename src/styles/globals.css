@@ -2,9 +2,11 @@
 
 /* Neo둥근모 Code */
 @import url('https://cdn.jsdelivr.net/gh/neodgm/neodgm-webfont@latest/neodgm_code/style.css');
-/* Neo둥근모 Pro: HTML import */
 /* Noto Sans */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+/* Neo둥근모 Pro: npm import */
+/* galmuri: npm import */
 
 html {
   margin-left: calc(100vw - 100%);

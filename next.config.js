@@ -7,6 +7,7 @@ const nextConfig = {
 
 if (process.env.NODE_ENV === 'production') {
   nextConfig.basePath = '/suitcase';
+  nextConfig.assetPrefix = '/suitcase';
 }
 
 module.exports = withExportImages(nextConfig);

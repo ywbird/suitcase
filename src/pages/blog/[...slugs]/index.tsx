@@ -5,6 +5,9 @@ import { MDXRemoteSerializeResult } from 'next-mdx-remote/dist';
 import { getAllPosts } from '@/libs/post';
 import { serializeMdx } from '@/libs/mdx';
 import Layout from '@/components/layouts/Layouts';
+import { Post } from '@/types';
+
+import styles from './post.module.css';
 
 export const getStaticPaths: GetStaticPaths = () => {
   const posts = getAllPosts();
@@ -32,14 +35,27 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
+      post,
       mdx,
     },
   };
 };
 
-export default function PostPage({ mdx }: { mdx: MDXRemoteSerializeResult }) {
+export default function PostPage({
+  mdx,
+  post,
+}: {
+  mdx: MDXRemoteSerializeResult;
+  post: Post;
+}) {
   return (
-    <Layout>
+    <Layout title={post.title}>
+      <p>
+        {post.date} -{' '}
+        {post.tags.map((tag) => (
+          <span key={tag}>{tag} </span>
+        ))}
+      </p>
       <div className="post">
         <MDXRemote {...mdx} />
       </div>

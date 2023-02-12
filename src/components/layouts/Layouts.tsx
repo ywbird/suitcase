@@ -1,17 +1,23 @@
 import Link from 'next/link';
-import { ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
+
 import NavLink from '../common/NavLink';
 import Head from 'next/head';
 
-const Layout = ({ children }: { children: ReactNode }) => {
+import styles from './layout.module.css';
+
+const Layout: FC<{
+  children: ReactNode;
+  title: string;
+}> = ({ children, title }) => {
   return (
-    <div>
+    <div className={styles.container}>
       <Head>
         <title>Suitcase</title>
       </Head>
       <header>
         <nav>
-          <ul>
+          <ul className={styles.navLinks}>
             <li>
               <NavLink href="/">Home</NavLink>
             </li>
@@ -24,7 +30,10 @@ const Layout = ({ children }: { children: ReactNode }) => {
           </ul>
         </nav>
       </header>
-      <main>{children}</main>
+      <main>
+        <h1 className={styles.heading}>{title}</h1>
+        <div>{children}</div>
+      </main>
     </div>
   );
 };

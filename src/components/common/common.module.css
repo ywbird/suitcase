@@ -3,10 +3,14 @@
   text-decoration: none;
 }
 
+.link:hover {
+  text-decoration: underline;
+}
+
 .activeLink {
   font-weight: bold;
 }
 
-.activeLink:hover {
-  text-decoration: none;
+.navLinkItem {
+  padding-right: 2rem;
 }

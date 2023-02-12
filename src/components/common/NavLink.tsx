@@ -4,18 +4,22 @@ import { useRouter } from 'next/router';
 
 import styles from './common.module.css';
 import { $ } from '@/libs/core';
+import HoverLink from './HoverLink';
 
 const NavLink = ({ children, href }: { children: ReactNode; href: string }) => {
   const router = useRouter();
   const isActive = router.asPath.startsWith(href ?? '/');
 
   return (
-    <Link
+    <HoverLink
       href={href}
-      className={$(isActive ? styles.activeLink : undefined, styles.link)}
+      className={$(
+        isActive ? styles.activeLink : undefined,
+        styles.navLinkItem
+      )}
     >
       {children}
-    </Link>
+    </HoverLink>
   );
 };
 

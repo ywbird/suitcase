@@ -1,0 +1,15 @@
+.heading {
+  color: darkslateblue;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  padding-left: none;
+}
+
+.container {
+  margin: auto;
+  max-width: 700px;
+  font-family: sans-serif;
+}

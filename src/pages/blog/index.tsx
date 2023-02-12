@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import { getAllPosts } from '@/libs/post';
 import Layout from '@/components/layouts/Layouts';
+import HoverLink from '@/components/common/HoverLink';
 
 export const getStaticProps = () => {
   return {
@@ -14,11 +15,11 @@ export const getStaticProps = () => {
 
 export default function PostsPage({ posts }: { posts: Post[] }) {
   return (
-    <Layout>
+    <Layout title="Posts">
       <ul>
         {posts.map((post, i) => (
           <li key={i}>
-            <Link href={post.slug}>{post.title}</Link>
+            <HoverLink href={post.slug}>{post.title}</HoverLink>
           </li>
         ))}
       </ul>

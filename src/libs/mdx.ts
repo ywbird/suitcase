@@ -5,6 +5,7 @@ import rehypeSlug from 'rehype-slug';
 import remarkBreaks from 'remark-breaks';
 import remarkGfm from 'remark-gfm';
 import rehypePrettyCode from 'rehype-pretty-code';
+import rehypeInternalLinks from './rehypeInternalLinks';
 
 const options = {
   // Use one of Shiki's packaged themes
@@ -39,6 +40,7 @@ export const serializeMdx = (source: string) => {
         rehypeSlug,
         // rehypeCodeTitles,
         // rehypePrism,
+        [rehypeInternalLinks, { basePath: '/suitcase' }],
         [rehypePrettyCode, options],
         [
           rehypeAutolinkHeadings,

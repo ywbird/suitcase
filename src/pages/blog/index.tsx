@@ -1,9 +1,9 @@
 import { Post } from '@/types';
-import Link from 'next/link';
 
 import { getAllPosts } from '@/libs/post';
 import Layout from '@/components/layouts/Layouts';
 import Article from '@/components/Article';
+
 import styles from './posts.module.scss';
 
 export const getStaticProps = () => {

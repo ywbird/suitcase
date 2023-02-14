@@ -50,14 +50,19 @@ export default function PostPage({
 }) {
   return (
     <Layout title={post.title}>
-      <p>
-        {post.date} -{' '}
-        {post.tags.map((tag) => (
-          <span key={tag}>{tag} </span>
-        ))}
+      <p className={styles.meta}>
+        <div className={styles.date}>{post.date}</div>
+        <hr className={styles.bar} />
       </p>
       <div className={styles.content}>
         <MDXRemote {...mdx} />
+      </div>
+      <div className={styles.tags}>
+        {post.tags.map((tag) => (
+          <span className={styles.tag} key={tag}>
+            {tag}
+          </span>
+        ))}
       </div>
     </Layout>
   );

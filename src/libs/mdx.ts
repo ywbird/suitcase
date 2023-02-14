@@ -1,13 +1,11 @@
 import { serialize } from 'next-mdx-remote/serialize';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeExternalLinks from 'rehype-external-links';
-import rehypePrism from 'rehype-prism-plus';
 import rehypeSlug from 'rehype-slug';
 import remarkBreaks from 'remark-breaks';
 import remarkGfm from 'remark-gfm';
-import rehypeCodeTitles from 'rehype-code-titles';
-
 import rehypePrettyCode from 'rehype-pretty-code';
+import rehypeTwemojify from 'rehype-twemojify';
 
 const options = {
   // Use one of Shiki's packaged themes
@@ -42,6 +40,7 @@ export const serializeMdx = (source: string) => {
         rehypeSlug,
         // rehypeCodeTitles,
         // rehypePrism,
+        rehypeTwemojify,
         [rehypePrettyCode, options],
         [
           rehypeAutolinkHeadings,

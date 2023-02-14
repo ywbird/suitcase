@@ -1,7 +1,7 @@
 @use '@/styles/colors' as c;
 
 .heading {
-  color: c.$black;
+  color: c.$text;
 }
 
 .navLinks {
@@ -15,7 +15,7 @@
   max-width: 700px;
   font-family: var(--font-sans-serif);
   font-size: 16px;
-  color: c.$black;
+  color: c.$text;
 }
 
 .themeToggle {

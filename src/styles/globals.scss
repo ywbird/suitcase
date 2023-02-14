@@ -1,5 +1,7 @@
 @use './code.scss';
 
+@use './colors' as c;
+
 /* Neo둥근모 Code */
 @import url('https://cdn.jsdelivr.net/gh/neodgm/neodgm-webfont@latest/neodgm_code/style.css');
 /* Noto Sans */
@@ -11,6 +13,9 @@
 html {
   margin-left: calc(100vw - 100%);
   margin-right: 0;
+
+  font-variant-numeric: slashed-zero;
+  font-variant-numeric: tabular-nums;
 }
 
 img {
@@ -26,14 +31,15 @@ img {
 
 strong {
   font-weight: normal;
-  text-decoration: underline;
+  // text-decoration: underline;
+  text-shadow: 0 0 3px c.$text;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-weight: normal;
+  font-weight: 700;
 }
 
 h1 {
@@ -69,6 +75,7 @@ body {
   min-height: 100vh;
 
   background-image: var(--bg-img);
+  background-color: var(--color-bg);
 }
 
 :root {
@@ -76,8 +83,8 @@ body {
   --color-bg: #eff1f3;
   --color-primary: #1343ff;
   --color-second: #fed766;
-  --color-mute: #696773;
-  --bg-img: url('/images/paper-light.png');
+  --color-mute: #4c4b53;
+  --bg-img: url('https://i.imgur.com/bsZ8ESP.jpg');
 }
 
 [data-theme='dark'] {
@@ -85,8 +92,8 @@ body {
   --color-bg: #272727;
   --color-primary: #ff4a13;
   --color-second: #fed766;
-  --color-mute: #696773;
-  --bg-img: url('/images/paper-dark.png');
+  --color-mute: #a8a6b3;
+  --bg-img: url('https://i.imgur.com/pN0TzHi.png');
 }
 
 [data-theme='light'] {
@@ -94,6 +101,11 @@ body {
   --color-bg: #eff1f3;
   --color-primary: #1343ff;
   --color-second: #fed766;
-  --color-mute: #696773;
-  --bg-img: url('/images/paper-light.png');
+  --color-mute: #4c4b53;
+  --bg-img: url('https://i.imgur.com/bsZ8ESP.jpg');
+}
+
+.emoji {
+  display: inline-block;
+  height: 1em;
 }

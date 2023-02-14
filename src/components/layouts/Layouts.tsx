@@ -17,7 +17,7 @@ const Layout: FC<{
   return (
     <div className={styles.container}>
       <Head>
-        <title>{title} | Suitcase</title>
+        <title>{`${title} | Suitcase`}</title>
       </Head>
       <header>
         <nav>

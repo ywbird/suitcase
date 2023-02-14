@@ -11,7 +11,7 @@ function HomePage() {
       <Image
         width={400}
         height={400}
-        src={`/images/paper-${theme === 'dark' ? 'light' : 'dark'}.png`}
+        src="https://picsum.photos/400/400?grayscale"
         alt="paper"
         placeholder="blur"
       />

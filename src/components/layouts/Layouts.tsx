@@ -6,6 +6,8 @@ import NavLink from '../common/NavLink';
 
 import styles from './layout.module.scss';
 
+import config from '@/config.json';
+
 const Layout: FC<{
   children: ReactNode;
   title: string;
@@ -26,15 +28,11 @@ const Layout: FC<{
       <header>
         <nav>
           <ul className={styles.navLinks}>
-            <li>
-              <NavLink href="/">[Home]</NavLink>
-            </li>
-            <li>
-              <NavLink href="/about">[About]</NavLink>
-            </li>
-            <li>
-              <NavLink href="/blog">[Blog]</NavLink>
-            </li>
+            {config.menu.map((item) => (
+              <li key={item.path}>
+                <NavLink href={item.path}>[{item.name}]</NavLink>
+              </li>
+            ))}
             <li>
               <button
                 role="button"

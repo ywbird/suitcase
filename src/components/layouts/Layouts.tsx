@@ -13,12 +13,7 @@ const Layout: FC<{
   title: string;
 }> = ({ children, title }) => {
   const { theme, setTheme } = useTheme();
-  let nextTheme = theme === 'black' ? 'white' : 'black';
-
-  function toggleTheme() {
-    setTheme(nextTheme);
-    nextTheme = theme === 'black' ? 'white' : 'black';
-  }
+  const nextTheme = theme === 'black' ? 'white' : 'black';
 
   return (
     <div className={styles.container}>
@@ -37,9 +32,9 @@ const Layout: FC<{
               <button
                 role="button"
                 className={styles.themeToggle}
-                onClick={toggleTheme}
+                onClick={() => setTheme(nextTheme)}
               >
-                [{theme}]
+                [{nextTheme === 'black' ? 'White' : 'Black'}]
               </button>
             </li>
           </ul>

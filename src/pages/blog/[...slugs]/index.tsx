@@ -50,10 +50,10 @@ export default function PostPage({
 }) {
   return (
     <Layout title={post.title}>
-      <p className={styles.meta}>
+      <div className={styles.meta}>
         <div className={styles.date}>{post.date}</div>
         <hr className={styles.bar} />
-      </p>
+      </div>
       <div className={styles.content}>
         <MDXRemote {...mdx} />
       </div>

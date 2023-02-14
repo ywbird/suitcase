@@ -36,7 +36,7 @@ function parsePost(path: string): Post | undefined {
         formatMatcher: 'best fit',
       }).format(new Date(grayMatter.date)),
       content,
-      slug: '/' + pathArr.join('/').replace('.mdx', ''),
+      slug: '/' + pathArr.join('/').replace('.mdx', '').replace('/index', ''),
       readingMinutes: Math.ceil(readingTime(content).minutes),
       wordCount: content.split(/\s+/gu).length,
     };

@@ -8,13 +8,23 @@ function HomePage() {
   return (
     <Layout title="Home">
       <p>Welcome to Next.js blog!</p>
-      <Image
-        width={400}
-        height={400}
-        src="https://picsum.photos/400/400?grayscale"
-        alt="paper"
-        placeholder="blur"
-      />
+      {theme === 'dark' ? (
+        <Image
+          width={400}
+          height={400}
+          src={`/images/paper-light.png`}
+          alt="paper"
+          placeholder="blur"
+        />
+      ) : (
+        <Image
+          width={400}
+          height={400}
+          src={`/images/paper-dark.png`}
+          alt="paper"
+          placeholder="blur"
+        />
+      )}
     </Layout>
   );
 }

@@ -4,6 +4,34 @@
   a {
     color: c.$primary;
   }
+
+  p {
+    line-height: 16px;
+  }
+  // @for $i from 1 through 6 {
+  //   h#{$i} {
+  //     // &::before {
+  //     //   content: '#';
+  //     //   position: absolute;
+  //     //   translate: -1em 0;
+  //     //   color: c.$mute;
+  //     // }
+  //   }
+  // }
+  blockquote {
+    background-color: c.$sec-bg;
+    margin-inline: 0;
+    padding: 1rem;
+    padding-left: 1rem;
+    border-left: 0.3rem solid c.$mute;
+
+    :first-child {
+      margin-top: 0;
+    }
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 // #7BA638
@@ -32,7 +60,7 @@
 }
 
 .bar {
-  height: 1px;
+  // height: 1px;
   background-color: c.$mute;
   flex-grow: 1;
 }

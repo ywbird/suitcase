@@ -5,7 +5,6 @@ import rehypeSlug from 'rehype-slug';
 import remarkBreaks from 'remark-breaks';
 import remarkGfm from 'remark-gfm';
 import rehypePrettyCode from 'rehype-pretty-code';
-import rehypeTwemojify from 'rehype-twemojify';
 
 const options = {
   // Use one of Shiki's packaged themes
@@ -40,13 +39,12 @@ export const serializeMdx = (source: string) => {
         rehypeSlug,
         // rehypeCodeTitles,
         // rehypePrism,
-        rehypeTwemojify,
         [rehypePrettyCode, options],
         [
           rehypeAutolinkHeadings,
           {
             properties: {
-              className: ['anchor'],
+              className: ['header-anchor'],
             },
           },
         ],

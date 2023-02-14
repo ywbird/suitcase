@@ -7,6 +7,16 @@
 /* Noto Sans */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
+@import url('https://cdn.jsdelivr.net/gh/quiple/hbios-sys@latest/hbios-sys.css');
+
+@font-face {
+  font-family: 'IyagiGGC';
+  src: url('https://cdn.jsdelivr.net/gh/JuwanPark/IyagiGGC@latest/IyagiGGC.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Neo둥근모 Pro: npm import */
 /* galmuri: npm import */
 
@@ -18,22 +28,26 @@ html {
   font-variant-numeric: tabular-nums;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 img {
   max-width: 100%;
 }
 
 :root {
   --font-monospace: 'NeoDunggeunmo Code', consolas, monospace;
-  --font-sans-serif: 'NeoDunggeunmo Pro', system-ui, -apple-system,
-    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
-    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --font-sans-serif: 'HBIOS-SYS', system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 }
 
-strong {
-  font-weight: normal;
-  // text-decoration: underline;
-  text-shadow: 0 0 3px c.$text;
-}
+// strong {
+//   font-weight: normal;
+//   // text-decoration: underline;
+//   text-shadow: 0 0 3px c.$text;
+// }
 
 h1,
 h2,
@@ -74,31 +88,35 @@ body {
   text-underline-offset: 3px;
   min-height: 100vh;
 
-  background-image: var(--bg-img);
+  // background-image: var(--bg-img);
   background-color: var(--color-bg);
 }
 
 :root {
   --color-text: #272727;
   --color-bg: #eff1f3;
+  --color-sec-bg: #b6b6b6;
   --color-primary: #1343ff;
   --color-second: #fed766;
   --color-mute: #4c4b53;
   --bg-img: url('https://i.imgur.com/bsZ8ESP.jpg');
 }
 
-[data-theme='dark'] {
+[data-theme='black'] {
   --color-text: #eff1f3;
-  --color-bg: #272727;
+  // --color-bg: #272727;
+  --color-bg: #000000;
+  --color-sec-bg: #303030;
   --color-primary: #ff4a13;
   --color-second: #fed766;
   --color-mute: #a8a6b3;
   --bg-img: url('https://i.imgur.com/pN0TzHi.png');
 }
 
-[data-theme='light'] {
+[data-theme='white'] {
   --color-text: #272727;
-  --color-bg: #eff1f3;
+  --color-bg: #dbdbdb;
+  --color-sec-bg: #b6b6b6;
   --color-primary: #1343ff;
   --color-second: #fed766;
   --color-mute: #4c4b53;
@@ -108,4 +126,14 @@ body {
 .emoji {
   display: inline-block;
   height: 1em;
+}
+
+.header-anchor::after {
+  content: '#';
+  display: block;
+  position: absolute;
+  translate: -1em 15%;
+  color: c.$text;
+  font-family: var(--font-monospace);
+  font-weight: normal;
 }

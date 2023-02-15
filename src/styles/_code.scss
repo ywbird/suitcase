@@ -1,5 +1,8 @@
+@use './colors' as c;
+
 pre[data-language] {
   padding: 0.7rem;
+  position: relative;
 }
 
 code[data-language],
@@ -24,4 +27,27 @@ div[data-rehype-pretty-code-title] {
   padding-block: 0.3rem;
   font-family: var(--font-monospace);
   font-size: 16px;
+}
+
+:not(pre) > code[data-language] {
+  padding: 0.3rem;
+}
+
+/* highlight */
+[data-language] {
+  font-family: var(--font-monospace);
+
+  // position: relative;
+  .line.highlighted {
+  }
+  & > .line.highlighted::before {
+    content: ' ';
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    translate: -0.7rem 0;
+    text-align: right;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 4px 0 0 0 rgba(#fed766, 1);
+  }
 }

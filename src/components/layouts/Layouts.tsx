@@ -1,19 +1,18 @@
 import { FC, ReactNode } from 'react';
 import Head from 'next/head';
-import { useTheme } from 'next-themes';
 
 import NavLink from '../common/NavLink';
 
 import styles from './layout.module.scss';
 
 import config from '@/config.json';
+import useDarkMode from '@/libs/useDarkMode';
 
 const Layout: FC<{
   children: ReactNode;
   title: string;
 }> = ({ children, title }) => {
-  const { theme, setTheme } = useTheme();
-  const nextTheme = theme === 'black' ? 'white' : 'black';
+  const { isThemeDark, toggleTheme } = useDarkMode();
 
   return (
     <div className={styles.container}>
@@ -32,9 +31,9 @@ const Layout: FC<{
               <button
                 role="button"
                 className={styles.themeToggle}
-                onClick={() => setTheme(nextTheme)}
+                onClick={toggleTheme}
               >
-                [{nextTheme === 'black' ? 'White' : 'Black'}]
+                [{isThemeDark ? 'Black' : 'White'}]
               </button>
             </li>
           </ul>

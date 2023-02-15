@@ -42,19 +42,19 @@ console.log('banana');
 Codeblock with title:
 
 ````md
-```js
+```js title="script.js"
 console.log('title');
 ```
 ````
 
-```js
+```js title="script.js"
 console.log('title');
 ```
 
 Codeblock with highlight:
 
 ````md
-```tsx title="pages/_app.tsx"
+```tsx title="pages/_app.tsx" {6-9}
 export default class App extends NextApp {
   render() {
     const { Component, pageProps } = this.props;
@@ -71,7 +71,7 @@ export default class App extends NextApp {
 ```
 ````
 
-```tsx title="pages/_app.tsx"
+```tsx title="pages/_app.tsx" {6-9}
 export default class App extends NextApp {
   render() {
     const { Component, pageProps } = this.props;
@@ -104,6 +104,14 @@ export default App;
 ```
 
 `Banana`
+
+## inline Codeblock
+
+```md
+`console.log('banana'){:ts}`
+```
+
+`console.log('banana'){:ts}`
 
 ## Image
 

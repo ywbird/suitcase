@@ -102,7 +102,7 @@ body {
   --bg-img: url('https://i.imgur.com/bsZ8ESP.jpg');
 }
 
-[data-theme='black'] {
+[data-theme='light'] {
   --color-text: #eff1f3;
   // --color-bg: #272727;
   --color-bg: #000000;
@@ -113,7 +113,7 @@ body {
   --bg-img: url('https://i.imgur.com/pN0TzHi.png');
 }
 
-[data-theme='white'] {
+[data-theme='dark'] {
   --color-text: #272727;
   --color-bg: #dbdbdb;
   --color-sec-bg: #b6b6b6;
@@ -132,8 +132,7 @@ body {
   content: '#';
   display: block;
   position: absolute;
-  translate: -1em 15%;
+  translate: -1em 0;
   color: c.$text;
-  font-family: var(--font-monospace);
   font-weight: normal;
 }

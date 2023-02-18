@@ -6,18 +6,13 @@
   }
 
   p {
-    line-height: 16px;
+    line-height: 20px;
   }
-  // @for $i from 1 through 6 {
-  //   h#{$i} {
-  //     // &::before {
-  //     //   content: '#';
-  //     //   position: absolute;
-  //     //   translate: -1em 0;
-  //     //   color: c.$mute;
-  //     // }
-  //   }
-  // }
+  @for $i from 1 through 6 {
+    h#{$i} {
+      scroll-margin-top: 3rem;
+    }
+  }
   blockquote {
     background-color: c.$sec-bg;
     margin-inline: 0;

@@ -2,20 +2,22 @@
 
 .heading {
   color: c.$text;
+  font-size: 40px;
+  text-align: center;
 }
 
 .navLinks {
   display: flex;
   list-style: none;
   padding-left: 0;
+  align-items: center;
 }
 
 .container {
   margin: auto;
   max-width: 700px;
-  font-family: var(--font-sans-serif);
-  font-size: 16px;
-  color: c.$text;
+
+  margin-top: 5rem;
 }
 
 .themeToggle {
@@ -28,5 +30,28 @@
 
   &::selection {
     outline: aqua;
+  }
+}
+
+.header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  background-color: c.$bg;
+  width: 100%;
+  z-index: 50;
+  justify-content: center;
+  border-bottom: 1px dotted c.$text;
+}
+
+.navBar {
+  width: 700px;
+}
+
+.logo {
+  filter: grayscale(100%);
+  &:hover {
+    filter: grayscale(0%);
+    transition: ease-in-out 0.2s;
   }
 }

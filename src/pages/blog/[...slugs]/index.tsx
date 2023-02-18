@@ -51,6 +51,7 @@ export default function PostPage({
   return (
     <Layout title={post.title}>
       <div className={styles.meta}>
+        <hr className={styles.bar} />
         <div className={styles.date}>{post.date}</div>
         <hr className={styles.bar} />
       </div>

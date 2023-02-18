@@ -2,7 +2,6 @@
   "avatar": "/images/author.jpg",
   "nickname": "ywbird",
   "menu": [
-    { "name": "Home", "path": "/" },
     { "name": "About", "path": "/about" },
     { "name": "Blog", "path": "/blog" }
   ]

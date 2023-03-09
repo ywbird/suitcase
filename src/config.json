@@ -4,5 +4,15 @@
   "menu": [
     { "name": "About", "path": "/about" },
     { "name": "Blog", "path": "/blog" }
+  ],
+  "footer": [
+    {
+      "icon": "/icons/gmail.svg",
+      "link": "mailto:ywbird@naver.com"
+    },
+    {
+      "icon": "/icons/github.svg",
+      "link": "https://github.com/ywbird"
+    }
   ]
 }

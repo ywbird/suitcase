@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import config from '@/config.json';
+
 import NavLink from '../common/NavLink';
 import useDarkMode from '@/libs/useDarkMode';
 

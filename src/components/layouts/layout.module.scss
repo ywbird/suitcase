@@ -54,3 +54,45 @@
     filter: grayscale(0%);
   }
 }
+
+.bar {
+  // height: 1px;
+  border: 0;
+  border-top: 1px dotted c.$text;
+  // background-color: c.$mute;
+  flex-grow: 1;
+}
+.meta {
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+}
+.date {
+  flex-shrink: 0;
+  flex-grow: 0;
+  color: c.$mute;
+  margin-inline: 0.3rem;
+}
+
+.copyright {
+  margin-block: 0;
+  width: max-content;
+  color: c.$mute;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-block: 3rem;
+  width: 700px;
+  margin-inline: auto;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: end;
+  fill: c.$mute;
+}

@@ -36,32 +36,26 @@
   margin-block: 0;
 }
 
-.meta {
-  display: flex;
-  align-items: center;
-  // justify-content: space-between;
-}
-
 .tags {
   flex-shrink: 0;
   flex-grow: 0;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .tag {
   display: inline-block;
   border: 2px solid c.$text;
-  margin-inline: 0.3rem;
+  // margin-inline: 0.3rem;
   padding: 0.07rem 0.2rem;
+
+  margin-block: 2rem;
 }
 
 .bar {
   // height: 1px;
-  background-color: c.$mute;
+  border: 0;
+  border-top: 1px dotted c.$text;
+  // background-color: c.$mute;
   flex-grow: 1;
-}
-
-.date {
-  flex-shrink: 0;
-  flex-grow: 0;
-  margin-inline: 0.3rem;
 }

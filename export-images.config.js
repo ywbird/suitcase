@@ -4,7 +4,7 @@
 const config = {};
 
 if (process.env.NODE_ENV === 'production') {
-  config.basePath = '/suitcase';
+  config.basePath = '/';
 }
 
 module.exports = config;

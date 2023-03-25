@@ -6,8 +6,8 @@ const nextConfig = {
 };
 
 if (process.env.NODE_ENV === 'production') {
-  nextConfig.basePath = '/suitcase';
-  nextConfig.assetPrefix = '/suitcase';
+  nextConfig.basePath = '/';
+  nextConfig.assetPrefix = '/';
 }
 
 module.exports = withExportImages(nextConfig);
